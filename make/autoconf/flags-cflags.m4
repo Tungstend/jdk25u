@@ -785,11 +785,6 @@ AC_DEFUN([FLAGS_SETUP_CFLAGS_CPU_DEP],
     fi
   fi
 
-  if test "x$TOOLCHAIN_TYPE" = xgcc; then
-    # This flag is required since GCC 6 as undefined behavior in OpenJDK code
-    # runs afoul of the more aggressive versions of this optimization.
-  fi
-
   if test "x$TOOLCHAIN_TYPE" = xmicrosoft; then
     REPRODUCIBLE_CFLAGS="-experimental:deterministic"
     FLAGS_COMPILER_CHECK_ARGUMENTS(ARGUMENT: [${REPRODUCIBLE_CFLAGS}],

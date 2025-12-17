@@ -788,7 +788,7 @@ AC_DEFUN([FLAGS_SETUP_CFLAGS_CPU_DEP],
   if test "x$TOOLCHAIN_TYPE" = xgcc; then
     # This flag is required since GCC 6 as undefined behavior in OpenJDK code
     # runs afoul of the more aggressive versions of this optimization.
-    $1_TOOLCHAIN_CFLAGS="-fno-lifetime-dse"
+    # $1_TOOLCHAIN_CFLAGS="-fno-lifetime-dse"
   fi
 
   if test "x$TOOLCHAIN_TYPE" = xmicrosoft; then

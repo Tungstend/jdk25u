@@ -48,6 +48,10 @@
 
 #include "childproc.h"
 
+#ifdef __ANDROID__
+#include "posix_spawn.h"
+#endif
+
 /*
  *
  * When starting a child on Unix, we need to do three things:

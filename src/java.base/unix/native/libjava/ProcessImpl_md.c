@@ -44,13 +44,13 @@
 #include <signal.h>
 #include <string.h>
 
-#include <spawn.h>
-
-#include "childproc.h"
-
 #ifdef __ANDROID__
 #include "posix_spawn.h"
+#else
+#include <spawn.h>
 #endif
+
+#include "childproc.h"
 
 /*
  *

@@ -30,6 +30,10 @@
 
 #include "utf_util.h"
 
+#ifdef __ANDROID__
+#include <iconv.h>
+#endif
+
 
 /* Error and assert macros */
 #define UTF_ERROR(m) utfError(__FILE__, __LINE__,  m)
